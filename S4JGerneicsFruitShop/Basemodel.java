@@ -1,5 +1,7 @@
 package S4JGerneicsFruitShop;
 
-public class Basemodel {
+import java.io.Serializable;
+
+public class Basemodel implements Serializable{
 
 }

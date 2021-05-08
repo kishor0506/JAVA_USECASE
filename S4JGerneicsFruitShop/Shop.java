@@ -22,9 +22,10 @@ public class Shop {
 		HashMap<Integer,Fuji> hm2=new HashMap<Integer, Fuji>();
 		HashMap<Integer,Cameo> hm3=new HashMap<Integer, Cameo>();
 		AppleCategory AC=new AppleCategory();
-		Map<Object, Object> m=new HashMap<>();
+		Map m=new HashMap<>();
 		for(int i=1;i<=num;i++)
 		{
+			
 			sc.nextLine();
 			System.out.println("Enter the Fruit Name : ");
 			fruitName=sc.nextLine();
@@ -45,25 +46,29 @@ public class Shop {
 			quantity=sc.nextInt();	
 			System.out.println("Enter the Cost : ");
 			cost=sc.nextDouble();
-			if(i==1)
+			if(i == 1)
 			{
-				hm1.put(i=1,new Envy(fruitName, fruitType, distributorName, fruitWeight, fruitCategory, location, expiryDate, quantity, cost,cost*quantity));
+				hm1.put(1,new Envy(fruitName, fruitType, distributorName, fruitWeight, fruitCategory, location, expiryDate, quantity, cost,cost*quantity));
+				
+				
 				m.put(1,hm1);
 			}
 			else if(i==2)
 			{
-				hm2.put(i=2,new Fuji(fruitName, fruitType, distributorName, fruitWeight, fruitCategory, location, expiryDate, quantity, cost,cost*quantity));
+				hm2.put(2,new Fuji(fruitName, fruitType, distributorName, fruitWeight, fruitCategory, location, expiryDate, quantity, cost,cost*quantity));
 				m.put(2,hm2);
 			}
 			else
 			{
-				hm3.put(i=3,new Cameo(fruitName, fruitType, distributorName, fruitWeight, fruitCategory, location, expiryDate, quantity, cost,cost*quantity));
+				hm3.put(3,new Cameo(fruitName, fruitType, distributorName, fruitWeight, fruitCategory, location, expiryDate, quantity, cost,cost*quantity));
 				m.put(3,hm3);
 			}
-			AC.addAppleCategory(hm1);
-			AC.addAppleCategory(hm2);
-			AC.addAppleCategory(hm3);
+			new AppleCategory().getdetails(hm1);
+			new AppleCategory().getdetails(hm2);
+			new AppleCategory().getdetails(hm3);
+			
 }
+		
 }
 }
 

@@ -13,6 +13,7 @@ public class AppleCategory {
 		return ha;	
 	}
 	public void getdetails(HashMap<Integer,? extends Apple> ha) {
+		
 		System.out.println(ha);
 	}
 

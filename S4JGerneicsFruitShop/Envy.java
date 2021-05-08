@@ -8,5 +8,5 @@ public class Envy extends Apple{
 				totalcost);
 		
 	}
-
+	
 }
